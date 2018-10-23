@@ -1,10 +1,17 @@
 const debug = require("debug")("firehook:index");
 const firebase = require("firebase");
+const Sentry = require("@sentry/node");
 
 const { config, loadConfig } = require("./config");
 const { runAction } = require("./plugins");
 
 function initialize(callback) {
+  const SENTRY_DSN = process.env.SENTRY_DSN;
+  if (typeof SENTRY_DSN === "string") {
+    Sentry.init({ dsn: SENTRY_DSN });
+    debug("Sentry is enabled");
+  }
+
   const BLANK_VALUE = "-----";
   firebase.initializeApp(config.firebase.api);
   const db = firebase.database();

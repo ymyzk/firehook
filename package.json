@@ -6,6 +6,7 @@
   "author": "Yusuke Miyazaki <miyazaki.dev@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@sentry/node": "4.2.1",
     "axios": "^0.18.0",
     "debug": "^4.1.0",
     "firebase": "^5.5.5",

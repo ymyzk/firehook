@@ -23,7 +23,7 @@ async function runAction(action) {
   const { actor, args } = action;
   debug("running action: %o", action);
   const actorInstance = loadActor(actor);
-  if (typeof args === "string" || typeof args === "number") {
+  if (typeof args === "string" || typeof args === "number" || typeof args === "object") {
     return await actorInstance.run(args);
   } else if (Array.isArray(args)) {
     return await actorInstance.run(...args);

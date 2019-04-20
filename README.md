@@ -1,2 +1,6 @@
 # Firehook
-Google Assistant -> IFTTT -> Firebase Realtime Database -> Firehook -> Nature Remo (Cloud API)
+Google Assistant -> IFTTT -> Firebase Realtime Database -> Firehook -> Anything
+
+- IKEA TRÅDFRI
+- Nature Remo (Cloud API)
+- REGZA HTTP API
